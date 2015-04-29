@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>BAKK2</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="style/vis.min.css">
+		<link rel="stylesheet" href="style/main.css">
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">	
+				<h1>BAKK2 Test</h1>
+			</div>
+		</header>
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4" id="input">
+						<div class="input-group">
+	              <span class="input-group-btn">
+	                  <span class="btn btn-primary btn-file">
+	                      Browse&hellip; <input type="file" />
+	                  </span>
+	              </span>
+	              <input type="text" class="form-control" readonly>
+	          </div>
+					</div>
+					<div class="col-md-4">
+						<select name="algo" id="algo">
+							<option value="pca">PCA</option>
+							<option value="lpp">LPP</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6" id="visualization"></div>
+					<div class="col-md-6" id="varianceDiagram"></div>
+				</div>
+			</div>
+		</section>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="script/numeric-1.2.6.js"></script>
+		<script src="script/pca.js"></script>
+		<script src="script/bakk.js"></script>
+		<script src="script/jstat.js"></script>
+		<script src="script/vis.min.js"></script>
+		<script src="script/Chart.js"></script>
+		<script src="script/main.js"></script>
+	</body>
+</html>
