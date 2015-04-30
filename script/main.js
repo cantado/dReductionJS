@@ -100,22 +100,6 @@ function recalc(dataset){
 		drawGraph(data, visualization);
 		drawDiagram(variances, varianceDiagram);
 	}
-
-	/*var visualization = document.getElementById('visualization');
-	var varianceDiagram = document.getElementById('varianceDiagram');
-	var algo = $('#algo').val();
-
-	visualization.innerHTML = "LOADING...";
-	varianceDiagram.innerHTML = "LOADING...";
-
-	var result = dr[algo](dataset);
-
-	var data = result[3];
-	var variances = getVariancesInPercent(result[1]);
-
-	drawGraph(data, visualization);
-	drawDiagram(variances, varianceDiagram);*/
-
 	
 }
 
