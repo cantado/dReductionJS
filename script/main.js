@@ -1,12 +1,7 @@
 
-var bakk = new BAKK();
+var dr = new dReduction();
 var w;
 var dataset = [];
-
-var algorithm = {
-	pca: bakk.pca,
-	lpp: bakk.lpp
-};
 
 window.algo = function(){};
 window.callback = function(){};
@@ -82,7 +77,7 @@ function readFiles(files){
 
 function recalc(dataset){
 
-	/*var visualization = document.getElementById('visualization');
+	var visualization = document.getElementById('visualization');
 	var varianceDiagram = document.getElementById('varianceDiagram');
 	var algo = $('#algo').val();
 
@@ -104,22 +99,22 @@ function recalc(dataset){
 
 		drawGraph(data, visualization);
 		drawDiagram(variances, varianceDiagram);
-	}*/
+	}
 
-	var visualization = document.getElementById('visualization');
+	/*var visualization = document.getElementById('visualization');
 	var varianceDiagram = document.getElementById('varianceDiagram');
 	var algo = $('#algo').val();
 
 	visualization.innerHTML = "LOADING...";
 	varianceDiagram.innerHTML = "LOADING...";
 
-	var result = bakk[algo](dataset);
+	var result = dr[algo](dataset);
 
 	var data = result[3];
 	var variances = getVariancesInPercent(result[1]);
 
 	drawGraph(data, visualization);
-	drawDiagram(variances, varianceDiagram);
+	drawDiagram(variances, varianceDiagram);*/
 
 	
 }
