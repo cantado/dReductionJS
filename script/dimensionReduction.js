@@ -5,13 +5,13 @@ var numeric;
 function init(data){
 
 	var p1 = new Promise(prom("numeric-1.2.6.min.js"));
-	var p2 = new Promise(prom("bakk.js"));
+	var p2 = new Promise(prom("dReduction.js"));
 
 	Promise.all([p1, p2]).then(function(){
 		numeric = window.numeric;
 		var dataset = JSON.parse(data.dataset);
-		var bakk = new window.BAKK();
-		var result = bakk[data.algo](dataset);
+		var dr = new window.dReduction();
+		var result = dr[data.algo](dataset);
 
 		postMessage(JSON.stringify(result));
 	});

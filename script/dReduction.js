@@ -1,6 +1,6 @@
 (function(window, undefined){
 	
-	function bakk(opt){
+	function dReduction(opt){
 		if(!numeric){
 			throw("You have to include numeric.js");
 		}
@@ -70,7 +70,7 @@
 	 * PCA
 	 *
 	 **********/
-	bakk.prototype.pca = function pca(X, dim){
+	dReduction.prototype.pca = function pca(X, dim){
 		var m 				= X.length,
 				n 				= X[0].length,
 				newDim 		= dim || this.dim || 3,
@@ -104,7 +104,7 @@
 	 * LPP
 	 *
 	 **********/
-	bakk.prototype.lpp = function lpp(X, opt){
+	dReduction.prototype.lpp = function lpp(X, opt){
 		opt = opt || {};
 		var m 						= X.length,
 				n 						= X[0].length,
@@ -143,7 +143,7 @@
 
 
 
-	bakk.prototype.centerMatrix = function centerMatrix(X){
+	dReduction.prototype.centerMatrix = function centerMatrix(X){
 		var m = X.length,
 				n = X[0].length,
 				mittel = [],
@@ -165,7 +165,7 @@
 		return numeric.transpose(Xc);
 	}
 
-	bakk.prototype.covarianceMatrix = function covarianceMatrix(X){
+	dReduction.prototype.covarianceMatrix = function covarianceMatrix(X){
 		var CM = [],
 				n = X[0].length;
 		X = numeric.transpose(X);
@@ -179,7 +179,7 @@
 		return CM;
 	}
 
-	bakk.prototype.getCholesky = function getCholesky(X){
+	dReduction.prototype.getCholesky = function getCholesky(X){
 		var n = X.length,
 				L = [],
 				i, j, g, s;
@@ -207,7 +207,7 @@
 		return L;
 	}
 
-	bakk.prototype.getDegreeMatrix = function getDegreeMatrix(X){
+	dReduction.prototype.getDegreeMatrix = function getDegreeMatrix(X){
 		var m = X.length,
 				Xt = [],
 				D = [],
@@ -222,7 +222,7 @@
 		return D;
 	}
 
-	bakk.prototype.getAdjacencyMatrix = function getAdjacencyMatrix(X, numNeighbors){
+	dReduction.prototype.getAdjacencyMatrix = function getAdjacencyMatrix(X, numNeighbors){
 		var m = X.length,
 				diffM = [],
 				neighborsM = [],
@@ -234,7 +234,7 @@
 		return neighborsM;
 	}
 
-	bakk.prototype.getDiffMatrix = function getDiffMatrix(X){
+	dReduction.prototype.getDiffMatrix = function getDiffMatrix(X){
 		var m = X.length,
 				diffM = [],
 				i, j;
@@ -250,7 +250,7 @@
 		return diffM;
 	}
 
-	bakk.prototype.getNearestNeighbors = function getNearestNeighbors(diffM, numNeighbors, func){
+	dReduction.prototype.getNearestNeighbors = function getNearestNeighbors(diffM, numNeighbors, func){
 		var m = diffM.length,
 				neighborsM = [],
 				func = func || function(){ return true; },
@@ -270,6 +270,6 @@
 		return neighborsM;
 	}
 
-	window.BAKK = bakk;
+	window.dReduction = dReduction;
 
 })(window);
